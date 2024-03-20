@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 90vw;
+  margin: auto auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 3fr 3fr 3fr 3fr 3fr 3fr 3fr;
+  grid-template-areas:
+    "header nav"
+    "image1 image1"
+    "image2 image2"
+    "image3 image3"
+    "image4 image4"
+    "image5 image5"
+    "image6 image6"
+    "image7 image7";
+  gap: 10px;
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+nav2 {
+  display: none;
+}
+
+#image1 {
+  grid-area: image1;
+}
+
+#image2 {
+  grid-area: image2;
+}
+
+#image3 {
+  grid-area: image3;
+}
+
+#image4 {
+  grid-area: image4;
+}
+
+#image5 {
+  grid-area: image5;
+}
+
+#image6 {
+  grid-area: image6;
+}
+
+#image7 {
+  grid-area: image7;
+}
+
+img {
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    grid-template-columns: 4fr 1fr 1fr 4fr;
+    grid-template-rows: 1fr 3fr 3fr 3fr 3fr;
+    grid-template-areas:
+      "header header header nav2"
+      "image1 image1 image1 image2"
+      "image3 image3 image4 image4"
+      "image3 image3 image5 image5"
+      "image6 image7 image7 image7";
+    gap: 10px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    grid-area: nav2;
+  }
+
+  nav2 ul {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  nav2 ul li {
+    list-style-type: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    grid-template-columns: 3fr 1fr 3fr 3fr;
+    grid-template-rows: 1fr 3fr 5fr 2fr 4fr;
+    grid-template-areas:
+      "header header header nav2"
+      "image1 image1 image2 image3"
+      "image4 image4 image4 image3"
+      "image4 image4 image4 image5"
+      "image6 image7 image7 image7";
+    gap: 10px;
+    height: fit-content;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    grid-area: nav2;
+  }
+
+  nav2 ul {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  nav2 ul li {
+    list-style-type: none;
+  }
+}
